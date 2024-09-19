@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+html {
+    height: calc(100vh - 50px);
+  }
+body {
+    font-family: "Nerko One", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    
+    background: linear-gradient(to bottom, #70C4EE, #025192);
+}
+
+* {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+button{
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}

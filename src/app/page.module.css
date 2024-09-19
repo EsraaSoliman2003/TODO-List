@@ -1,0 +1,32 @@
+.page{
+  width: 60%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 100px);
+  gap: 30px;
+}
+.header{
+  text-align: center;
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+.links{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 2rem;
+}
+.link{
+  background-color: #eee;
+  border-radius: 4px;
+  padding: 3px 15px;
+  transition: 0.1s;
+  width: 5rem;
+  text-align: center;
+}
+.link:hover{
+  background-color: #eeeeeec0;
+}

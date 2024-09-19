@@ -1,0 +1,16 @@
+.container {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    width: calc(100% - 20px);
+    background-color: #eee;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 0 10px
+
+}
+
+

@@ -1,0 +1,32 @@
+.container {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eee;
+    width: calc(100% - 20px);
+    left: 0;
+    padding: 0 10px;
+    background-color: transparent;
+    position: fixed;
+}
+
+.logo {
+    font-size: 45px;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+}
+
+.logout {
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.1s;
+    padding: 5px 15px;
+}
+.logout:hover{
+    background-color: rgba(255, 255, 255, 0.871);
+  }
