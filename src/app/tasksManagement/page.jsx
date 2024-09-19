@@ -10,7 +10,7 @@ export default function TasksManagement() {
   console.log(session)
   const [tasks, setTasks] = useState([]);
 
-  const url="http://localhost:3000"
+  const url = process.env.NEXT_PUBLIC_URL;
 
   useEffect(() => {
     // Define an async function within useEffect and call it
