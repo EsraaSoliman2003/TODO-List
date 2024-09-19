@@ -49,7 +49,10 @@ export default function Login() {
           Login
         </button>
       </form>
-      <button className={styles.button} onClick={() => signIn("google")}>
+      <button className={styles.button} onClick={() => {
+        signIn("google")
+        router.push("/tasksManagement");
+      }}>
         Login with Google
       </button>
       <Link className={styles.link} href="/register">
