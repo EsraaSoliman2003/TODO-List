@@ -2,11 +2,12 @@
 import React from "react";
 import styles from "./page.module.css";
 import Link from "next/link";
-import { signIn } from "next-auth/react";
+import { signIn, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 
 export default function Login() {
   const router = useRouter();
+  const session = useSession();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -59,6 +60,7 @@ export default function Login() {
       <Link className={styles.link} href="/register">
         Sign Up
       </Link>
+      {session.status === "authenticated" && router.push("/tasksManagement")}
     </div>
   );
 }
