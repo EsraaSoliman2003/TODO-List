@@ -30,6 +30,15 @@ export default function Login() {
     }
   };
 
+  const handleGoogleSignIn = async () => {
+    const result = await signIn("google", { redirect: false });
+    if (result?.ok) {
+      router.push("/tasksManagement");
+    } else {
+      console.error("Google login failed");
+    }
+  };
+  
   return (
     <div className={styles.container}>
       <form className={styles.form} onSubmit={handleSubmit}>
@@ -49,10 +58,7 @@ export default function Login() {
           Login
         </button>
       </form>
-      <button className={styles.button} onClick={() => {
-        signIn("google")
-        router.push("/tasksManagement");
-      }}>
+      <button className={styles.button} onClick={handleGoogleSignIn}>
         Login with Google
       </button>
       <Link className={styles.link} href="/register">
