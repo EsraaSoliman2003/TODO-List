@@ -9,7 +9,6 @@ export default function Login() {
   const router = useRouter();
 
   const handleSubmit = async (e) => {
-
     e.preventDefault();
     const email = e.target[0].value;
     const password = e.target[1].value;
@@ -31,14 +30,10 @@ export default function Login() {
   };
 
   const handleGoogleSignIn = async () => {
-    const result = await signIn("google", { redirect: false });
-    if (result?.ok) {
-      router.push("/tasksManagement");
-    } else {
-      console.error("Google login failed");
-    }
+    await signIn("google")
+    router.push("/tasksManagement");
   };
-  
+
   return (
     <div className={styles.container}>
       <form className={styles.form} onSubmit={handleSubmit}>
